@@ -180,7 +180,7 @@ ul{
 .showcase .content .cont .info p {
     font-family: Arial, Helvetica, sans-serif;
     color: #434343;
-    font-weight: 400;
+    font-weight: 100;
     line-height: 1.6;
     font-size: 17px;
 }
