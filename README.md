@@ -1,3 +1,3 @@
 ## Live Host
 
-https://zouhaeir.github.io/test/
+https://zouhaeir.github.io

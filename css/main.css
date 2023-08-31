@@ -2,6 +2,7 @@
     --mainColor: #007bff;
     --secondaryColor: #282828;
     --thirdColor: rgb(195,224,255);
+    --main-duration: 0.3s;
 }
 @font-face{
     font-family: 'tajawal';
@@ -64,19 +65,75 @@ ul{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px;
 }
-.header h2{
+.header .container > h2{
+    color: var(--mainColor);
+    font-size: 20px;
     margin: 0;
 }
-.header ul li {
-    display: inline-block;
-    font-size: 14px;
+.header .links{
+    position: relative;
+    padding-top: 9px;
 }
-.header ul li a{
+.header .links:hover .icon span:nth-child(2){
+    width:100%
+}
+.header .links .icon {
+    width:30px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: flex-end;
+}
+.header .links .icon span{
+    background-color: #333;
+    margin-bottom:5px;
+    height:2px;
+}
+.header .links .icon span:first-child{
+    width:100%
+}
+.header .links .icon span:nth-child(2){
+    width:60%;
+    transition: var(--main-duration);
+}
+.header .links .icon span:last-child{
+    width:100%
+}
+.header .links ul{
+    list-style: none;
+    margin:0;
+    padding: 0;
+    background-color: #f3f3f3 ;
+    position:absolute;
+    right:0;
+    min-width: 200px;
+    top:calc(100% + 15px);
+    display: none;
+    z-index: 1;
+}
+.header .links ul::before{
+    content:"";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #f3f3f3 transparent;
+    position: absolute;
+    right: 5px;
+    top: -19px;
+}
+
+.header .links ul li a{
+    display:block;
+    padding:15px;
     text-decoration: none;
-    text-transform: uppercase;
-    margin-left: 10px;
-    color: black;
+    color:#333;
+    transition: var(--main-duration);
+}
+.header .links ul li a:hover{
+    padding-left:25px;
+}
+.header .links ul li:not(:last-child){
+    border-bottom:1px solid #ddd
 }
 
 /*Start Landing*/
@@ -96,11 +153,13 @@ ul{
 
 }
 .landing .info h1{
-    font-size: 40px;
     margin: 0;
+    color: #fff;
+}
+.landing .info h1 span{
     color: var(--mainColor);
 }
-.landing .info p{
+.landing .info h4{
     color: #fff;
     line-height: 1.5
 }
@@ -124,6 +183,18 @@ ul{
 .aboutMe .info p{
     line-height: 1.6;
     color: #434343;
+    margin: 0;
+    position: relative;
+}
+.aboutMe .info p::before{
+    position: absolute;
+    content: "";
+    width: 5px;
+    height: 5px;
+    background-color: var(--secondaryColor);
+    left: -13px;
+    top: 10px;
+    border-radius: 50%;
 }
 /* End AboutMe */
 /*Start Skills*/
@@ -146,9 +217,6 @@ ul{
     width: 100%;
     border-radius: 10px
 }
-.skills .box h3{
-    font-weight: 400;
-}
 .skills .box .prog span{
     background-color: var(--thirdColor);
     display: inline-block;
@@ -170,6 +238,9 @@ ul{
     border-radius: 15px;
     padding: 20px;
 }
+.showcase .content .cont:hover{
+    background-color: #e9f4ff;
+}
 .showcase .content .cont .info{
     height: 250px;
     position: relative;
@@ -178,9 +249,7 @@ ul{
     font-size: 22px;
 }
 .showcase .content .cont .info p {
-    font-family: Arial, Helvetica, sans-serif;
     color: #434343;
-    font-weight: 400;
     line-height: 1.6;
     font-size: 17px;
 }
@@ -191,7 +260,7 @@ ul{
     border-radius: 6px;
     position: absolute;
     bottom: 20px;
-    transition: 0.3s;
+    transition: var(--main-duration);
     text-decoration: none;
 }
 .showcase .content .cont .info a::after{
@@ -222,6 +291,13 @@ ul{
 .footer a {
     color: var(--thirdColor);
     text-decoration: none;
+}
+.footer .social .link{
+    width:fit-content;
+    transition: var(--main-duration);
+}
+.footer .social .link:hover{
+    margin-left: 5px;
 }
 .footer .social span{
     display: block;

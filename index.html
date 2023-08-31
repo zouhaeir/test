@@ -1,16 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- من أنا ؟
-
-مرحبا ! اسمي زهير, مبرمج و مصمم و مطور مواقع و تطبيقات سطح مكتب .
-إلى الاّن برمجت أكثر من 3 مواقع, وصنعت ما يقارب 5 تطبيقات سطح مكتب منها ما هو تطبيق واجهة رسومية ومنها ما هو تطبيق سطر أوامر
- -->
-
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/icon.png">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/all.min.css">
@@ -23,24 +18,30 @@
   <div class="header">
     <div class="container">
       <h2>AXL</h2>
-      <ul>
-        <li><a href="#aboutMe">About</a></li>
-        <li><a href="#skill">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#">عربي</a></li>
-      </ul>
+      <div class="links" onclick="link()">
+        <span class="icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+        <ul id="ul">
+          <li><a href="#aboutMe">About</a></li>
+          <li><a href="#skill">Skills</a></li>
+          <li><a href="#showcase">Showcase</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
     </div>
+  </div>
   </div>
   <!-- End header -->
   <!-- Start Landing -->
   <div class="landing">
     <div class="container">
       <div class="info">
-        <h1>Zouhair</h1>
-        <p>Hey There<br>
-          My name is zouhair, this is my profile. <br>Here I'm gonna share everything about my skills.
-        </p>
-        <a href="#aboutMe">Show More</a>
+        <h1>Welcome To <br><span>My</span> Website</h1>
+        <h4>My name is Zouhair Khalid</h4>
+        <a href="#aboutMe">About Me</a>
       </div>
     </div>
   </div>
@@ -50,12 +51,10 @@
     <div class="container">
       <h2 class="heading">About Me</h2>
       <div class="info">
-        <p>A Web Developer specialized in Front-End development<br>
-          Programming languages including HTML CSS JavaScript Python SQLite3 and Flask framework.<br>
-          Basics of C and C++ programming,
-          and other skills such as Command-Line, computer knowledge <br><br>
-          A strong background in Photoshop and Video Editing.
-        </p>
+        <p>A Web Developer specialized in Front-End development</p>
+        <p>Programming languages including HTML CSS JavaScript Python SQLite3 and Flask framework.</p>
+        <p>Basics of C and C++ programming, and other skills such as Command-Line, computer knowledge</p><br>
+        <p>A strong background in Photoshop and Video Editing.</p>
 
       </div>
     </div>
@@ -67,15 +66,15 @@
       <h2 class="heading">Skills</h2>
       <div class="box">
         <div class="skill">
-          <h3>HTML : 82%</h3>
+          <h3>HTML : 79%</h3>
           <div class="prog">
-            <span style="width: 82%"></span>
+            <span style="width: 79%"></span>
           </div>
         </div>
         <div class="skill">
-          <h3>CSS : 87%</h3>
+          <h3>CSS : 81%</h3>
           <div class="prog">
-            <span style="width: 87%"></span>
+            <span style="width: 81%"></span>
           </div>
         </div>
         <div class="skill">
@@ -101,7 +100,7 @@
   </div>
   <!-- End Skills -->
   <!-- Start Showcase -->
-  <div class="showcase section-padding">
+  <div class="showcase section-padding" id="showcase">
     <div class="container">
       <h2 class="heading">Showcase</h2>
       <div class="content">
@@ -110,7 +109,7 @@
           <div class="info">
             <h3>Leon Template</h3>
             <p>Hello there. We are Leon - Super creative & Minimal Agency Web Template</p>
-            <a href="#">Show More</a>
+            <a href="http://github.com/zouhaeir/leon" target="_blank">Show More</a>
           </div>
         </div>
         <div class="cont">
@@ -118,7 +117,7 @@
           <div class="info">
             <h3>Codepipe Template</h3>
             <p>Learn to code by playing games. Github is the platform for your favorite web development games.</p>
-            <a href="#">Show More</a>
+            <a href="http://github.com/zouhaeir/codepipe" target="_blank">Show More</a>
           </div>
         </div>
         <div class="cont">
@@ -127,7 +126,7 @@
             <h3>Messenger</h3>
             <p>An application look like Facebook Messenger, but this made by Python programming with Object-Oriented
               programming (OOP) and database.</p>
-            <a href="#">Show More</a>
+            <a href="http://github.com/zouhaeir/py-messenger" target="_blank">Show More</a>
           </div>
         </div>
         <div class="cont">
@@ -135,7 +134,7 @@
           <div class="info">
             <h3>Simple Database</h3>
             <p>This is a simple SQLite3 database made by Python programming used from the terminal to store messages</p>
-            <a href="#">Show More</a>
+            <a href="http://github.com/zouhaeir/py-db" target="_blank">Show More</a>
           </div>
         </div>
       </div>
@@ -149,27 +148,45 @@
           class="link">zouhairkhalid26@gmail.com</a></h3>
       <h3>Find me on:</h3>
       <div class="social">
-        <a href="http://www.instagram.com" target="_blank">
-          <span><i class="fa-brands fa-instagram"></i>Instagram</span>
-        </a>
-        <a href="http://www.twitter.com" target="_blank">
-          <span><i class="fa-brands fa-twitter"></i>Twitter</span>
-        </a>
-        <a href="http://github.com/zouhaeir" target="_blank">
-          <span><i class="fa-brands fa-github"></i>Github</span>
-        </a>
-        <a href="me.telegram.me/sfd" target="_blank">
-          <span><i class="fa-brands fa-telegram"></i>Telegram</span>
-        </a>
-        <a href="http://github.com/zouhaeir" target="_blank">
-          <span><i class="fa-brands fa-whatsapp"></i>WhatsApp</span>
-        </a>
+        <div class="link">
+          <a href="http://www.instagram.com/axldev26" target="_blank">
+            <span><i class="fa-brands fa-instagram"></i>Instagram</span>
+          </a>
+        </div>
+        <div class="link">
+          <a href="http://facebook.com/axlcorp" target="_blank">
+            <span><i class="fa-brands fa-facebook"></i>Facebook</span>
+          </a>
+        </div>
+        <div class="link">
+          <a href="http://github.com/zouhaeir" target="_blank">
+            <span><i class="fa-brands fa-github"></i>Github</span>
+          </a>
+        </div>
+        <div class="link">
+          <a href="https://t.me/967776822174" target="_blank">
+            <span><i class="fa-brands fa-telegram"></i>Telegram</span>
+          </a>
+        </div>
+        <div class="link">
+          <a href="https://wa.me/967776822174" target="_blank">
+            <span><i class="fa-brands fa-whatsapp"></i>WhatsApp</span>
+          </a>
+        </div>
       </div>
       <h3>&copy 2023 - <span>Zouhair</span> All Rights Reserved</h3>
     </div>
   </div>
   <!-- End Footer -->
-  <script type="text/javascript">
+  <script>
+    function link() {
+      var x = document.querySelector("#ul");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
   </script>
 </body>
 
